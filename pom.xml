@@ -2,9 +2,8 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <scm>
-        <url>https://github.com/virajbukitagar123/spring-course-pet-clinic</url>
-        <connection>scm:git:ssh://git@github.com:virajbukitagar123/spring-course-pet-clinic.git</connection>
-        <developerConnection>scm:git:ssh://git@github.com:virajbukitagar123/spring-course-pet-clinic.git</developerConnection>
+        <connection>scm:git:https://github.com/virajbukitagar123/spring-course-pet-clinic.git</connection>
+        <developerConnection>scm:git:https://github.com/virajbukitagar123/spring-course-pet-clinic.git</developerConnection>
         <tag>spring-course-pet-clinic-0.0.1</tag>
     </scm>
 

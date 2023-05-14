@@ -4,8 +4,6 @@ import guru.springframework.springcoursepetclinic.model.Owner;
 import guru.springframework.springcoursepetclinic.model.Vet;
 import guru.springframework.springcoursepetclinic.services.OwnerService;
 import guru.springframework.springcoursepetclinic.services.VetService;
-import guru.springframework.springcoursepetclinic.services.map.OwnerServiceMap;
-import guru.springframework.springcoursepetclinic.services.map.VetServiceMap;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 

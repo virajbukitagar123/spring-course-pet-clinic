@@ -1,6 +1,7 @@
 package guru.springframework.springcoursepetclinic.bootstrap;
 
 import guru.springframework.springcoursepetclinic.model.Owner;
+import guru.springframework.springcoursepetclinic.model.Pet;
 import guru.springframework.springcoursepetclinic.model.PetType;
 import guru.springframework.springcoursepetclinic.model.Vet;
 import guru.springframework.springcoursepetclinic.services.OwnerService;
@@ -8,6 +9,8 @@ import guru.springframework.springcoursepetclinic.services.PetTypeService;
 import guru.springframework.springcoursepetclinic.services.VetService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.time.LocalDate;
 
 @Component
 public class DataLoader implements CommandLineRunner {
@@ -35,12 +38,34 @@ public class DataLoader implements CommandLineRunner {
         Owner owner1 = new Owner();
         owner1.setFirstName("Michael");
         owner1.setLastName("Weston");
+        owner1.setAddress("123 Brickerel");
+        owner1.setCity("Miami");
+        owner1.setTelephone("1111111111");
+
+        Pet mikesPet = new Pet();
+        mikesPet.setName("Snoopy");
+        mikesPet.setPetType(savedDogPetType);
+        mikesPet.setOwner(owner1);
+        mikesPet.setBirthDate(LocalDate.now());
+
+        owner1.getPets().add(mikesPet);
 
         ownerService.save(owner1);
 
         Owner owner2 = new Owner();
         owner2.setFirstName("Fiona");
         owner2.setLastName("Glenanne");
+        owner2.setAddress("124 Bleeker St");
+        owner2.setCity("New York");
+        owner2.setTelephone("2222222222");
+
+        Pet fionasCat = new Pet();
+        fionasCat.setName("Gooses");
+        fionasCat.setPetType(savedCatPetType);
+        fionasCat.setOwner(owner2);
+        fionasCat.setBirthDate(LocalDate.now());
+
+        owner2.getPets().add(fionasCat);
 
         ownerService.save(owner2);
 
@@ -59,6 +84,5 @@ public class DataLoader implements CommandLineRunner {
         vetService.save(vet2);
 
         System.out.println("Loaded Vets..");
-
     }
 }

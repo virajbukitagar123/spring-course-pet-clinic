@@ -1,9 +1,7 @@
 package guru.springframework.springcoursepetclinic.services.springdatajpa;
 
 import guru.springframework.springcoursepetclinic.model.Vet;
-import guru.springframework.springcoursepetclinic.repositories.SpecialityRepository;
 import guru.springframework.springcoursepetclinic.repositories.VetRepository;
-import guru.springframework.springcoursepetclinic.services.SpecialityService;
 import guru.springframework.springcoursepetclinic.services.VetService;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;

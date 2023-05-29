@@ -128,7 +128,8 @@ class OwnerControllerTest {
                 .andExpect(view().name("owners/createOrUpdateOwner"))
                 .andExpect(model().attributeExists("owner"));
 
-        verifyNoInteractions(ownerService); // ??
+        verify(ownerService)
+                .findById(anyLong());
     }
 
     @Test
